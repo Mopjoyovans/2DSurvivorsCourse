@@ -1,23 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://csox164frsyxe"]
+[gd_scene load_steps=10 format=3 uid="uid://csox164frsyxe"]
 
 [ext_resource type="PackedScene" uid="uid://48qol8dn36tf" path="res://scenes/ui/arena_time_ui.tscn" id="1_4xts8"]
 [ext_resource type="TileSet" uid="uid://d2vo1bwvpib6j" path="res://resources/tileset.tres" id="1_gel81"]
 [ext_resource type="PackedScene" uid="uid://j1a53id33y28" path="res://scenes/game_object/game_camera/game_camera.tscn" id="1_jxbtv"]
 [ext_resource type="PackedScene" uid="uid://b0fjsw5pyr577" path="res://scenes/manager/enemy_manager.tscn" id="1_oqeyl"]
 [ext_resource type="PackedScene" uid="uid://dilq4drjeyofs" path="res://scenes/game_object/player/player.tscn" id="1_q16si"]
+[ext_resource type="PackedScene" uid="uid://77s753hj4pg8" path="res://scenes/ui/experience_bar.tscn" id="2_dy5ay"]
 [ext_resource type="PackedScene" uid="uid://bi7chamaxqm0c" path="res://scenes/manager/arena_time_manager.tscn" id="2_us2m0"]
 [ext_resource type="PackedScene" uid="uid://m6vsplep0i2p" path="res://scenes/manager/experience_manager.tscn" id="4_f8p87"]
+[ext_resource type="PackedScene" uid="uid://c6255vowhg81u" path="res://scenes/manager/upgrade_manager.tscn" id="6_x8vxy"]
 
 [node name="Main" type="Node"]
 
 [node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_4xts8")]
 arena_time_manager = NodePath("../ArenaTimeManager")
 
+[node name="ExperienceBar" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("2_dy5ay")]
+experience_manager = NodePath("../ExperienceManager")
+
 [node name="ArenaTimeManager" parent="." instance=ExtResource("2_us2m0")]
 
 [node name="EnemyManager" parent="." instance=ExtResource("1_oqeyl")]
 
 [node name="ExperienceManager" parent="." instance=ExtResource("4_f8p87")]
+
+[node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("6_x8vxy")]
+experience_manager = NodePath("../ExperienceManager")
 
 [node name="GameCamera" parent="." instance=ExtResource("1_jxbtv")]
 
