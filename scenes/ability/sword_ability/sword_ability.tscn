@@ -132,8 +132,7 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 3.14159
-scale = Vector2(1.8037, 1.8037)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("1_57ctv")
 offset = Vector2(0, -4)
 
@@ -142,3 +141,4 @@ offset = Vector2(0, -4)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(15, 0)
 shape = SubResource("RectangleShape2D_tbtra")
+disabled = true
