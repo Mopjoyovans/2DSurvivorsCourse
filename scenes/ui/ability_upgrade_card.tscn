@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://couu5t8lrtkee"]
 
-[ext_resource type="Script" path="res://scenes/ui/ability_upgrade_card.gd" id="1_ngv1s"]
+[ext_resource type="Script" uid="uid://b56vbhfpssaud" path="res://scenes/ui/ability_upgrade_card.gd" id="1_ngv1s"]
 
 [node name="AbilityUpgradeCard" type="PanelContainer"]
 custom_minimum_size = Vector2(120, 150)

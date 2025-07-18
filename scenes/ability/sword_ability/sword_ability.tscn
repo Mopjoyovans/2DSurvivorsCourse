@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://1vcx3ia5fcp"]
 
 [ext_resource type="Texture2D" uid="uid://ciyr8i4a3gd08" path="res://scenes/ability/sword_ability/sword.png" id="1_57ctv"]
-[ext_resource type="Script" path="res://scenes/ability/sword_ability/sword_ability.gd" id="1_ukvb4"]
+[ext_resource type="Script" uid="uid://7jbf8fc0ng5e" path="res://scenes/ability/sword_ability/sword_ability.gd" id="1_ukvb4"]
 [ext_resource type="PackedScene" uid="uid://cytwstig6mww1" path="res://scenes/component/hitbox_component.tscn" id="2_lo16n"]
 
 [sub_resource type="Animation" id="Animation_gas81"]
@@ -115,8 +115,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fhonn"]
 _data = {
-"RESET": SubResource("Animation_gas81"),
-"swing": SubResource("Animation_0jpmx")
+&"RESET": SubResource("Animation_gas81"),
+&"swing": SubResource("Animation_0jpmx")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbtra"]
@@ -126,10 +126,10 @@ size = Vector2(30, 30)
 script = ExtResource("1_ukvb4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "RESET"
 libraries = {
-"": SubResource("AnimationLibrary_fhonn")
+&"": SubResource("AnimationLibrary_fhonn")
 }
+autoplay = "RESET"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1e-05, 1e-05)
